@@ -39,7 +39,7 @@ def combos_spilt(combos):
 
 def help(update, context):
     chat_id = update.message.chat_id
-    text = "<b>Available Sites:\n!alt~space~combo* - to check Altbalaji accounts\n!hoi~space~combo* - to check Hoichoi accounts\n!voo~space~combo* - to check Voot accounts\n!zee~space~combo* - to check Zee5 accounts\n\nMiscellaneous:-\n!pst~space~title|text - to paste text on Throwbin.io and get paste link</b>(If you don't want to give title then skip it just send the text)\n\n*combo here means Email:password combination,':' is important."
+    text = "<b>Top commands:\n\nZee Checker | !zee\nStatus: ✅ ON\n\nVoot Checker | !voo\nStatus: ✅ ON\n\nAlt Balaji Checker | !alt\nStatus: ✅ ON\n\nHoichoi Checker | !hoi\nStatus: ✅ ON\n*combo Here Means Email:Password\nCombination,':' Is Important.\n\nMiscellaneous:-\n!pst~space~title|text - to paste text on\nThrowbin.io and get paste link(If you don't\nwant to give title then skip it just send the text)\n\n~ Bot by - [𓆩𓊈𝗣𝗜𝗥𝗢 𝗔𝗬𝗨𝗦𝗛𓊉𓆪 </>]\n@PiroAyush</b>"
     Sendmessage(chat_id, text, reply_markup= InlineKeyboardMarkup(startmessage))
 
 def duty(update, context):
