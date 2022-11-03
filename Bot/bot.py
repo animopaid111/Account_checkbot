@@ -13,7 +13,7 @@ bot_token = os.environ.get('TG_BOT_TOKEN')
 startmessage = [[
 		InlineKeyboardButton(
 			"📜 𝐆𝐮𝐢𝐝𝐞",
-			url='https://telegra.ph/Instructions-to-Use-This-Bot-04-07'
+			url='https://telegra.ph/Guide-to-Use-This-Bot-11-03'
 		),
         InlineKeyboardButton(
 			"🧑‍💻 𝐃𝐞𝐯",
@@ -27,7 +27,7 @@ def start(update, context):
     print(info)
     chat_id = info.id
     userid= info['username']
-    text = f'Welcome @{userid}, To Account Check Bot, to know more use /help or read the telegraph below. This bot is provided for educational use only, any misuse then you should be responsible'
+    text = f'🙋‍♂ Hᴇʟʟᴏ @{userid},\n\n~ I am Multi Account checker \n\n~ To see my commands - /cmds\n━━━━━━━━━━━━━━━━━━\n\n✅ Available Checkers\n\n┏━━━━━━━━━━\n┠᪥ Zee5 Checker\n┠᪥ Voot Checker\n┠᪥ Alt balaji checker\n┠᪥ hoichoi checker\n┠━━━━━━━━━━\n\nBot By - [𓆩𓊈𝗣𝗜𝗥𝗢 𝗔𝗬𝗨𝗦𝗛𓊉𓆪 </>]\n@PiroAyush\n━━━━━━━━━━━━━━━━━━'
     Sendmessage(chat_id, text, reply_markup=InlineKeyboardMarkup(startmessage))
     return
 
