@@ -9,7 +9,7 @@ def altbalaji_helper(chat_id, combo):
         inpumail = combo_split[0]
         inpupass = combo_split[1]
     except IndexError:
-        return Editmessage(chat_id, 'Enter Valid Combo😡😡', status)
+        return Editmessage(chat_id, 'Enter Valid Combo ⚡', status)
     email= f'"username":"{inpumail}"'
     password = f'"password":"{inpupass}"'
 
@@ -22,7 +22,7 @@ def altbalaji_helper(chat_id, combo):
         state=result['status']
         code=result['code']
         messg = result['message']
-        text = f'<b>Bad Combo ❌</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: {state}\nCode: {code}\nMessage: {messg}\nSite: Altbalaji</b>'
+        text = f'<b>➤𝐂𝐨𝐦𝐛𝐨-» </b><code>{combo}</code>\n<b>➤𝐑𝐞𝐬𝐮𝐥𝐭-» ❌ 𝐋𝐨𝐠𝐢𝐧 𝐅𝐚𝐢𝐥𝐞𝐝\n➤𝐒𝐢𝐭𝐞-» altbalaji.com\n\n➤𝐁𝐨𝐭 𝐁𝐲 ~ @PiroAyush</b>'
         Editmessage(chat_id, text, status)
         return
     session_token = result['session_token']
@@ -39,7 +39,7 @@ def altbalaji_helper(chat_id, combo):
     response = session_request.get(subs_url, headers=head2)
     result = response.json()
     if result['orders'] == []:
-         expired_text = f'<b>Free Combo ❌</b>\n<b>Site: Altbalaji</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Free</b>'
+         expired_text = f'<b>➤𝐅𝐫𝐞𝐞 𝐂𝐨𝐦𝐛𝐨 ❌</b>\n<b>➤𝐒𝐢𝐭𝐞-» Altbalaji</b>\n<b>➤𝐂𝐨𝐦𝐛𝐨-» </b><code>{combo}</code>\n<b>➤𝐒𝐭𝐚𝐭𝐮𝐬-» Free\n\n➤𝐁𝐨𝐭 𝐁𝐲 ~ @PiroAyush</b>'
          Editmessage(chat_id, expired_text, status)
          return
     validto = result['orders'][0]['dates']['valid_to']
@@ -47,7 +47,7 @@ def altbalaji_helper(chat_id, combo):
     sub2split = validtosplit.split('-')
     trial = date(int(sub2split[0]), int(sub2split[1]), int(sub2split[2])) < date.today() 
     if trial:
-        free_text = f'<b>Expired Combo ❌</b>\n<b>Site: Altbalaji</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Expired/Free</b>'
+        free_text = f'<b>➤𝐄𝐱𝐩𝐢𝐫𝐞𝐝 𝐂𝐨𝐦𝐛𝐨-» ❌</b>\n<b>➤𝐒𝐢𝐭𝐞-» Altbalaji</b>\n<b>➤𝐂𝐨𝐦𝐛𝐨-» </b><code>{combo}</code>\n<b>➤𝐒𝐭𝐚𝐭𝐮𝐬-» Expired/Free\n\n➤𝐁𝐨𝐭 𝐁𝐲 ~ @PiroAyush</b>'
         Editmessage(chat_id, free_text, status)
         return
     days = date(int(sub2split[0]), int(sub2split[1]), int(sub2split[2])) - date.today()
